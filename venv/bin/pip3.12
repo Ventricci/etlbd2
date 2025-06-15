@@ -1,4 +1,4 @@
-#!/home/ventricci/Documentos/BD2/venv/bin/python3
+#!/home/ventricci/Documentos/BD2/Migration/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
