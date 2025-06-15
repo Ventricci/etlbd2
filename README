@@ -1,4 +1,5 @@
-# Configuração para inicialização do script ETL
+
+# Passo a passo para inicialização do script ETL
 
 ## Navegue até a pasta do projeto
 cd /BD2/Migration
@@ -9,8 +10,9 @@ python3 -m venv venv
 ## Ative o ambiente virtual
 source venv/bin/activate
 
-## Instale as dependências:
+## Instale as dependências
 pip install -r requirements.txt
 
-#Execute seu projeto
+
+## Execute seu projeto
 python3 migrationOrm.py
