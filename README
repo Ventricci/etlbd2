@@ -1,16 +1,16 @@
-### Inicialização do projeto
+# Configuração para inicialização do script ETL
 
-# Navegue até a pasta do seu projeto
-cd /caminho/para/o/seu/projeto
+## Navegue até a pasta do projeto
+cd /BD2/Migration
 
-# Crie o ambiente virtual
+## Crie o ambiente virtual
 python3 -m venv venv
 
-# Ative o ambiente virtual
+## Ative o ambiente virtual
 source venv/bin/activate
 
-# Para instalar essas dependências, execute o seguinte comando:
+## Instale as dependências:
 pip install -r requirements.txt
 
-#Após instalar as dependências e configurar suas variáveis de ambiente, você pode executar seu projeto.
+#Execute seu projeto
 python3 migrationOrm.py
