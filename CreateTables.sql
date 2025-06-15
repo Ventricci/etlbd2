@@ -47,3 +47,20 @@ CREATE TABLE Itinerario(
 	FOREIGN KEY(CodigoParada) REFERENCES Parada(Codigo),
 	FOREIGN KEY(PrefixoVeiculo) REFERENCES Veiculo(Prefixo)
 );
+
+CREATE USER dev WITH PASSWORD 'SDEunifei@123';
+CREATE USER dbmaster WITH PASSWORD 'SDEunifei@321';
+
+GRANT CONNECT ON DATABASE sptrans TO dev;
+GRANT USAGE ON SCHEMA public TO dev;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO dev;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO dev;
+
+GRANT CONNECT ON DATABASE sptrans TO dbmaster;
+GRANT USAGE ON SCHEMA public TO dbmaster;
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO dbmaster;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO dbmaster;
+
+CREATE INDEX idx_itinerario_datareferencia ON Itinerario (DataReferencia);
+CREATE INDEX idx_itinerario_codigolinha ON Itinerario (CodigoLinha);
+CREATE INDEX idx_itinerario_previsaochegada ON Itinerario (PrevisaoChegada);

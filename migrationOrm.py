@@ -269,9 +269,9 @@ def main():
         # Ordem correta de população
         #popular_linhas(session)
         #popular_linha_parada(session)
-        #popular_corredores(session)
+        popular_corredores(session)
         #popular_corredor_parada(session)
-        popular_veiculos_itinerario(session)
+        #popular_veiculos_itinerario(session)
         print("Banco de dados populado com sucesso!")
     except Exception as e:
         print(f"Erro durante a execução: {e}")
